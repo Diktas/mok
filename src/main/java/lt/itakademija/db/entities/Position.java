@@ -2,11 +2,14 @@ package lt.itakademija.db.entities;
 
 import java.math.BigDecimal;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -31,6 +34,12 @@ public class Position {
 
 	@Column(name = "bonus")
 	private BigDecimal bonus;
+
+	// -------------- Relationships --------------- //
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@PrimaryKeyJoinColumn
+	private Team_Members team_members;
 
 	// -------------- Getters and Setters --------------- //
 
@@ -72,6 +81,14 @@ public class Position {
 
 	public void setBonus(BigDecimal bonus) {
 		this.bonus = bonus;
+	}
+
+	public Team_Members getTeam_members() {
+		return team_members;
+	}
+
+	public void setTeam_members(Team_Members team_members) {
+		this.team_members = team_members;
 	}
 
 }

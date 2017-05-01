@@ -1,16 +1,21 @@
 package lt.itakademija.db.entities;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Team")
 public class Team {
-	
+
 	// -------------- Table Columns --------------- //
 
 	@Id
@@ -23,7 +28,17 @@ public class Team {
 
 	@Column(name = "description")
 	private String description;
-	
+
+	// -------------- Relationships --------------- //
+
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "TEAM_ID")
+	private List<Project> project;
+
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "TEAM_ID")
+	private List<Team_Members> team_members;
+
 	// -------------- Getters and Setters --------------- //
 
 	public Long getId() {
@@ -48,6 +63,22 @@ public class Team {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public List<Project> getProject() {
+		return project;
+	}
+
+	public void setProject(List<Project> project) {
+		this.project = project;
+	}
+
+	public List<Team_Members> getTeam_members() {
+		return team_members;
+	}
+
+	public void setTeam_members(List<Team_Members> team_members) {
+		this.team_members = team_members;
 	}
 
 }
