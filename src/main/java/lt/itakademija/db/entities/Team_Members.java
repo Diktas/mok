@@ -14,31 +14,35 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 
 @Entity
-@Table(name = "Person")
-public class Person {
-	
+@Table(name = "Team_Members")
+public class Team_Members {
+
+	// -------------- Table Columns --------------- //
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
+	private Long id;
 	
+	@Column(name = "team_id")
+	private Long team_id;
+
 	@Column(name = "name")
-    private String name;
-	
+	private String name;
+
 	@Column(name = "surname")
-    private String surname;
-	
+	private String surname;
+
 	@Column(name = "personal_id", unique = true)
-    private String personal_id;
-	
+	private String personal_id;
+
 	@Column(name = "date_of_birth")
-    private Date date_of_birth;
-	
+	private Date date_of_birth;
+
 	@Column(name = "address")
-//    @NotNull(message = "ADDRESS can not be empty")
-//    @Pattern(regexp = ".*([a-zA-Z0-9ąčęėįšųūžĄČĘĖĮŠŲŪŽ„“\"!,.:;-? ()]$)", message = "DISTRICTS ADDRESS contains invalid characters. ")
-//    @Length(min = 1, max = 150, message = "DISTRICTS ADDRESS must not be empty and length can not be longer than {max} symbols. ")
-    private String address;
+	private String address;
+
+	// -------------- Getters and Setters --------------- //
 
 	public Long getId() {
 		return id;
@@ -86,6 +90,14 @@ public class Person {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public Long getTeam_id() {
+		return team_id;
+	}
+
+	public void setTeam_id(Long team_id) {
+		this.team_id = team_id;
 	}
 
 }
