@@ -2,7 +2,6 @@ package lt.itakademija.db.entities;
 
 import java.math.BigDecimal;
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Project")
-public class Project {
+public class Project_Entity {
 	
 	// -------------- Table Columns --------------- //
 
@@ -85,5 +84,7 @@ public class Project {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	
 
 }

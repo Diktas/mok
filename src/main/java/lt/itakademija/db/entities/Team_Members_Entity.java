@@ -8,14 +8,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-
-import org.hibernate.validator.constraints.Length;
 
 @Entity
 @Table(name = "Team_Members")
-public class Team_Members {
+public class Team_Members_Entity {
 
 	// -------------- Table Columns --------------- //
 
@@ -23,9 +19,12 @@ public class Team_Members {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
-	
+
 	@Column(name = "team_id")
 	private Long team_id;
+	
+	@Column(name = "position_id")
+	private Long position_id;
 
 	@Column(name = "name")
 	private String name;
@@ -41,6 +40,12 @@ public class Team_Members {
 
 	@Column(name = "address")
 	private String address;
+
+	// -------------- Relationships --------------- //
+
+//	@OneToOne(cascade = CascadeType.ALL)
+//	@PrimaryKeyJoinColumn
+//	private Position_Entity position_entity;
 
 	// -------------- Getters and Setters --------------- //
 
@@ -98,6 +103,14 @@ public class Team_Members {
 
 	public void setTeam_id(Long team_id) {
 		this.team_id = team_id;
+	}
+
+	public Long getPosition_id() {
+		return position_id;
+	}
+
+	public void setPosition_id(Long position_id) {
+		this.position_id = position_id;
 	}
 
 }

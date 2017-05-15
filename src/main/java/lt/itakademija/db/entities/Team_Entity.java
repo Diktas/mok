@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Team")
-public class Team {
+public class Team_Entity {
 
 	// -------------- Table Columns --------------- //
 
@@ -33,11 +33,11 @@ public class Team {
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "TEAM_ID")
-	private List<Project> project;
+	private List<Project_Entity> project_entity;
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "TEAM_ID")
-	private List<Team_Members> team_members;
+	private List<Team_Members_Entity> team_members_entity;
 
 	// -------------- Getters and Setters --------------- //
 
@@ -65,20 +65,20 @@ public class Team {
 		this.description = description;
 	}
 
-	public List<Project> getProject() {
-		return project;
+	public List<Project_Entity> getProject() {
+		return project_entity;
 	}
 
-	public void setProject(List<Project> project) {
-		this.project = project;
+	public void setProject(List<Project_Entity> project_entity) {
+		this.project_entity = project_entity;
 	}
 
-	public List<Team_Members> getTeam_members() {
-		return team_members;
+	public List<Team_Members_Entity> getTeam_members_entity() {
+		return team_members_entity;
 	}
 
-	public void setTeam_members(List<Team_Members> team_members) {
-		this.team_members = team_members;
+	public void setTeam_members(List<Team_Members_Entity> team_members_entity) {
+		this.team_members_entity = team_members_entity;
 	}
 
 }

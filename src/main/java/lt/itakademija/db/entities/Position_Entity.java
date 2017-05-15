@@ -1,6 +1,7 @@
 package lt.itakademija.db.entities;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -8,13 +9,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Position")
-public class Position {
+public class Position_Entity {
 
 	// -------------- Table Columns --------------- //
 
@@ -22,9 +23,6 @@ public class Position {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
-
-	@Column(name = "member_id")
-	private Long member_id;
 
 	@Column(name = "position_title")
 	private String position_title;
@@ -37,11 +35,17 @@ public class Position {
 
 	// -------------- Relationships --------------- //
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@PrimaryKeyJoinColumn
-	private Team_Members team_members;
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "POSITION_ID")
+	private List<Team_Members_Entity> team_members_entity;
 
-	// -------------- Getters and Setters --------------- //
+	// -------------- Relationships --------------- //
+
+	// @OneToOne(cascade = CascadeType.ALL)
+	// @PrimaryKeyJoinColumn
+	// private Team_Members_Entity team_members_entity;
+
+	// ------------ Getters and Setters ----------- //
 
 	public Long getId() {
 		return id;
@@ -49,14 +53,6 @@ public class Position {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public Long getMember_id() {
-		return member_id;
-	}
-
-	public void setMember_id(Long member_id) {
-		this.member_id = member_id;
 	}
 
 	public String getPosition_title() {
@@ -83,12 +79,11 @@ public class Position {
 		this.bonus = bonus;
 	}
 
-	public Team_Members getTeam_members() {
-		return team_members;
+	public List<Team_Members_Entity> getTeam_members_entity() {
+		return team_members_entity;
 	}
 
-	public void setTeam_members(Team_Members team_members) {
-		this.team_members = team_members;
+	public void setTeam_members_entity(List<Team_Members_Entity> team_members_entity) {
+		this.team_members_entity = team_members_entity;
 	}
-
 }
