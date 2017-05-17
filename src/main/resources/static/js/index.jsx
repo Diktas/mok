@@ -21,9 +21,12 @@ var hashHistory = ReactRouter.hashHistory;
 
 ReactDOM.render((
     <Router history={hashHistory}>
-        <Route path="/" component={App}>
-            <IndexRoute component={HelloWorldComponent} />
-            <Route path="/hello-world" component={HelloWorldComponent} />
-        </Route>
+        <Router>
+            <Route path="/" component={MainPageComponent}>
+                <IndexRoute component={HelloWorldComponent} />
+                <Route path="/hello-world" component={HelloWorldComponent} />
+            </Route>
+            
+        </Router>
     </Router>
 ), document.getElementById( 'root' ) );
