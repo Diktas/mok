@@ -29,9 +29,9 @@ var MainPageComponent = React.createClass( {
                                 <li className="active"><a href="#">Home<span className="sr-only">(current)</span></a></li>
                                 <li><a href="#">Link</a></li>
                                 <li className="dropdown">
-                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></a>
+                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Tables <span className="caret"></span></a>
                                     <ul className="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
+                                        <li><Link to="/projects">Projects</Link></li>
                                         <li><a href="#">Another action</a></li>
                                         <li><a href="#">Something else here</a></li>
                                         <li role="separator" className="divider"></li>

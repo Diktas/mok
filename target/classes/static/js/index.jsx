@@ -25,6 +25,7 @@ ReactDOM.render((
             <Route path="/" component={MainPageComponent}>
                 <IndexRoute component={HelloWorldComponent} />
                 <Route path="/hello-world" component={HelloWorldComponent} />
+                <Route path="/projects" component={ProjectsContainer} />
             </Route>
             
         </Router>
