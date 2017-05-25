@@ -6,13 +6,13 @@ var App = React.createClass( {
             </div>
         );
     }
-});
+} );
 
 var NoMatch = React.createClass( {
     render: function() {
         return <div>Route did not match</div>;
     }
-});
+} );
 
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
@@ -29,8 +29,18 @@ ReactDOM.render((
                 <Route path="/projects/create" component={AddProjectContainer} />
                 <Route path="/projects/update/:projectId" component={EditProjectContainer} />
                 <Route path="/projects/description/:projectId" component={ProjectDescriptionContainer} />
+                <Route path="/teams" component={TeamsContainer} />
+                <Route path="/teams/create" component={AddTeamContainer} />
+                <Route path="/teams/update/:teamId" component={EditTeamContainer} />
+                <Route path="/teams/description/:teamId" component={TeamDescriptionContainer} />
+                <Route path="/members" component={MembersContainer} />
+                <Route path="/members/create" component={AddMemberContainer} />
+                <Route path="/members/update/:memberId" component={EditMemberContainer} />
+                <Route path="/members/description/:memberId" component={MemberDescriptionContainer} />
+                <Route path="/positions" component={PositionsContainer} />
+                <Route path="/positions/create" component={AddPositionContainer} />
+                <Route path="/positions/update/:positionId" component={EditPositionContainer} />
             </Route>
-            
         </Router>
     </Router>
 ), document.getElementById( 'root' ) );

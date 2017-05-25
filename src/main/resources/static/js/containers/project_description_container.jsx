@@ -19,10 +19,6 @@ var ProjectDescriptionContainer = React.createClass({
         axios.get('/api/project/' + projectId).then(function (response) {
             self.setState({project: response.data});
         });
-//        var partyId = this.props.params.partyId;
-//        axios.get( '/api/parties/' + partyId ).then( function( response ) {
-//            self.setState({ party: response.data });
-//        });
     },
 
 

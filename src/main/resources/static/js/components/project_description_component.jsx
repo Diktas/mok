@@ -12,7 +12,7 @@ var ProjectDescriptionComponent = React.createClass( {
 
         return (
             <div id="description" className="form-border">
-                <h2 className="description-title">Project Description</h2>
+                <h2 className="description-title">Project:<span style={{ color: 'black' }}>&nbsp;{this.props.project.project_title}</span></h2>
                 <hr />
 
                 <span className="description-title">Title:  </span><span>{this.props.project.project_title}</span><br />
@@ -20,7 +20,7 @@ var ProjectDescriptionComponent = React.createClass( {
                 <span className="description-title">Budget </span><span>{this.props.project.budget}</span><br />
                 <span className="description-title">Team ID: </span><span>{this.props.project.team_id}</span><br />
                 <hr />
-                <span className="description-title">About: </span><span>{this.props.project.description}</span><br /><br />
+                <span className="description-title">About Project: </span><span>{this.props.project.description}</span><br /><br />
                 <button id="ProjectDescriptionCancel" className="btn btn-success" style={{ marginRight: '20px' }}
                     onClick={this.props.onCancelClick}>Back
                 </button>

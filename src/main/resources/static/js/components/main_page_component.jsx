@@ -32,10 +32,10 @@ var MainPageComponent = React.createClass( {
                                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Tables <span className="caret"></span></a>
                                     <ul className="dropdown-menu">
                                         <li><Link to="/projects">Projects</Link></li>
-                                        <li><a href="#">Teams</a></li>
-                                        <li><a href="#">Something else here</a></li>
+                                        <li><Link to="/teams">Teams</Link></li>
+                                        <li><Link to="/members">Members</Link></li>
                                         <li role="separator" className="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
+                                        <li><Link to="/positions">Positions</Link></li>
                                         <li role="separator" className="divider"></li>
                                         <li><a href="#">One more separated link</a></li>
                                     </ul>

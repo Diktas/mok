@@ -24,17 +24,17 @@ var ProjectsComponent = React.createClass( {
                     <td>{project.project_title}</td>
                     <td>{project.budget}</td>
                     <td>{fullDate}</td>
-                    <td>
+                    <td style={{ width: '40px' }}>
                         <button type="button" className="btn btn-default" onClick={self.props.onEditItem( project )}
                             data-toggle="tooltip" data-placement="top" title="Edit project">
                             <span className="glyphicon glyphicon-pencil"></span></button>
                     </td>
-                    <td>
+                    <td style={{ width: '40px' }}>
                         <button id="ProjectDelete" type="button" className="btn btn-default" onClick={self.props.onRemoveItem( project )}
                             data-toggle="tooltip" data-placement="top" title="Delete project">
                             <span className="glyphicon glyphicon-remove"></span></button>
                     </td>
-                    <td>
+                    <td style={{ width: '40px' }}>
                         <button id={"ProjectDescription" + project.id} type="button" className="btn btn-default"
                             onClick={self.props.onDescriptionItemClick( project )}
                             data-toggle="tooltip" data-placement="top" title="Project Description">

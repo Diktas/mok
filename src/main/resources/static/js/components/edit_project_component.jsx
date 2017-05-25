@@ -2,7 +2,7 @@ var EditProjectComponent = React.createClass( {
     render: function() {
         return (
                 <form className="form-border">
-                <h3>Update project</h3>
+                <h3>Update Project</h3>
                 
                 <label >Title:</label><br />
                 <input className="form-control" type="text" value={this.props.project.project_title} onChange={this.props.onFieldChange('project_title')} /><br />
@@ -14,6 +14,7 @@ var EditProjectComponent = React.createClass( {
                 <input className="form-control" type="number" value={this.props.project.budget} onChange={this.props.onFieldChange('budget')}/><br />
                 <label>Dead Line:</label><br />
                 <input className="form-control" type="date" value={this.props.project.dead_line} onChange={this.props.onFieldChange('dead_line')} /><br /> 
+                
                 <button className="btn btn-success" style={{ marginRight: '20px' }} onClick={this.props.onSaveClick}  >Update</button>
                 <button className="btn btn-danger" style={{ marginRight: '20px' }} onClick={this.props.onCancelClick}  >Cancel</button>
             </form>

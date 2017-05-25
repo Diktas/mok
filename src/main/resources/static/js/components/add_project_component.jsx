@@ -2,7 +2,7 @@ var AddProjectComponent = React.createClass( {
     render: function() {
         return (
             <form className="form-border">
-                <h3>Create new project</h3>
+                <h3>Create new Project</h3>
                 
                 <label>Title:</label><br />
                 <input className="form-control" type="text" value={this.props.project.project_title} onChange={this.props.onFieldChange('project_title')} /><br />
