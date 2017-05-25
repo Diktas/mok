@@ -32,7 +32,7 @@ var MainPageComponent = React.createClass( {
                                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Tables <span className="caret"></span></a>
                                     <ul className="dropdown-menu">
                                         <li><Link to="/projects">Projects</Link></li>
-                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Teams</a></li>
                                         <li><a href="#">Something else here</a></li>
                                         <li role="separator" className="divider"></li>
                                         <li><a href="#">Separated link</a></li>
@@ -49,15 +49,13 @@ var MainPageComponent = React.createClass( {
                 <div className="content">
                     {this.props.children}
                 </div>
-                <div className="footer-bottom">
-                    <div className="container">
+                <footer>
                         <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div className="copyright">© 2017 Gsh</div>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </div>                    
+                </footer>
             </div>
 
         )

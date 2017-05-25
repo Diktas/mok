@@ -1,6 +1,6 @@
 #FileLock
-#Wed May 24 11:14:02 EEST 2017
+#Thu May 25 09:10:38 EEST 2017
 hostName=SIMANELISG.baltic-amadeus.lt
-id=15c39850ce657f5cc8fb43eafdd35fef34b57922db9
+id=15c3e3a6fa1fbb7dda32e5553203272ce0eac86b6ac
 method=file
-server=192.168.21.87\:50529
+server=192.168.21.87\:62781

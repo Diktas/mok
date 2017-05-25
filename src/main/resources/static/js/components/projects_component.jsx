@@ -1,3 +1,4 @@
+
 var ProjectsComponent = React.createClass( {
     render: function() {
         var self = this;
@@ -9,46 +10,55 @@ var ProjectsComponent = React.createClass( {
             var month = d.getMonth() + 1;
             var date = d.getDate();
             // jei menuo vienzenklis sk tai prieki bus 0 pvz: 03
-            if ( month < 10 ) {
+            if ( month < 10 ) 
                 month = '0' + month;
-            }
-            if ( date < 10 ) {
+            
+            if ( date < 10 ) 
                 date = '0' + date;
-            }
+            
             var fullDate = year + '-' + month + '-' + date;
 
             return (
-                <tr key={index}>
+                <tr key={index} >
                     <td>{project.id}</td>
-                    <td>{project.team_id}</td>
                     <td>{project.project_title}</td>
                     <td>{project.budget}</td>
-                    <td>{project.description}</td>
                     <td>{fullDate}</td>
                     <td>
-                        <button type="button" className="btn btn-default" onClick={self.props.onEditItem( project )}>
+                        <button type="button" className="btn btn-default" onClick={self.props.onEditItem( project )}
+                            data-toggle="tooltip" data-placement="top" title="Edit project">
                             <span className="glyphicon glyphicon-pencil"></span></button>
+                    </td>
+                    <td>
+                        <button id="ProjectDelete" type="button" className="btn btn-default" onClick={self.props.onRemoveItem( project )}
+                            data-toggle="tooltip" data-placement="top" title="Delete project">
+                            <span className="glyphicon glyphicon-remove"></span></button>
+                    </td>
+                    <td>
+                        <button id={"ProjectDescription" + project.id} type="button" className="btn btn-default"
+                            onClick={self.props.onDescriptionItemClick( project )}
+                            data-toggle="tooltip" data-placement="top" title="Project Description">
+                            <span className="glyphicon glyphicon-info-sign"></span></button>
                     </td>
                 </tr>
             );
-        });
+        } );
         return (
-            <div className="container">
-                <button className="btn btn-success" onClick={this.props.onAddClick}  >Mygtukas iterpti nauja knyga</button>
+            <div>
+                <button className="btn btn-success" onClick={this.props.onAddClick}  >Create new Project</button>
                 <div className="panel panel-default">
 
                     <div className="panel-heading">Projects</div>
-                    <table className="table table-hover">
+                    <table className="table table-hover" >
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>TEAM ID</th>
-                                <th>PROJECT_TITLE</th>
+                                <th>TITLE</th>
                                 <th>BUDGET</th>
-                                <th>DESCRIPTION</th>
                                 <th>DEAD LINE</th>
-                                <th>EDIT</th>
-
+                                <th></th>
+                                <th></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -59,7 +69,7 @@ var ProjectsComponent = React.createClass( {
             </div>
         )
     }
-});
+} );
 
 ProjectsComponent.propTypes = {
     projects: React.PropTypes.array.isRequired,

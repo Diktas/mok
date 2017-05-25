@@ -26,6 +26,9 @@ ReactDOM.render((
                 <IndexRoute component={HelloWorldComponent} />
                 <Route path="/hello-world" component={HelloWorldComponent} />
                 <Route path="/projects" component={ProjectsContainer} />
+                <Route path="/projects/create" component={AddProjectContainer} />
+                <Route path="/projects/update/:projectId" component={EditProjectContainer} />
+                <Route path="/projects/description/:projectId" component={ProjectDescriptionContainer} />
             </Route>
             
         </Router>

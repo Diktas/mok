@@ -1,1 +1,31 @@
-body { padding-bottom: 70px; background-color: lightgrey; }
+body {
+	padding-bottom: 70px;
+	background-color: lightgrey;
+}
+
+.content {
+	min-height: 80%;
+}
+
+.form-border {
+	border: 1px solid #111;
+	border-radius: 5px;
+	padding: 20px;
+	margin: 20px;
+}
+
+.description-title {
+    color: #008000;
+}
+
+footer {
+	background-color: #111;
+}
+
+.copyright {
+	color: #fff;
+	line-height: 30px;
+	min-height: 30px;
+	padding: 7px 0;
+	text-align: center;
+}

@@ -17,21 +17,40 @@ var ProjectsContainer = React.createClass( {
     },
 
 
-    // Add new project mygtuko paspaudimo action
+    // Add new project 
     handleAddProject() {
-        this.context.router.push( '/add-project' );
+        this.context.router.push( '/projects/create' );
     },
 
-    // Edit project mygtuko action
+    // Edit project 
     handleProjectEdit: function( project ) {
         var self = this;
         return function() {
-            self.context.router.push( '/project/edit/' + project.id );
+            self.context.router.push( '/projects/update/' + project.id );
+        }
+    },
+
+    // Remove project
+    handleProjectRemove: function( project ) {
+        var self = this;
+        return function() {
+            axios.delete( '/api/project/' + project.id ).then( function( response ) {
+                self.componentWillMount();
+            } );
+        };
+    },
+
+    // Description
+    handleProjectDescription: function( project ) {
+        var self = this;
+        return function() {
+            self.context.router.push( '/projects/description/' + project.id );
         }
     },
 
     render: function() {
-        return <ProjectsComponent projects={this.state.projects} onAddClick={this.handleAddProject} onEditItem={this.handleProjectEdit} />
+        return <ProjectsComponent projects={this.state.projects} onAddClick={this.handleAddProject} onEditItem={this.handleProjectEdit}
+            onRemoveItem={this.handleProjectRemove} onDescriptionItemClick={this.handleProjectDescription} />
     }
 } );
 
