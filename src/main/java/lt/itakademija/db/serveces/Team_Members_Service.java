@@ -32,5 +32,9 @@ public class Team_Members_Service {
     public Team_Members_Entity findById(Long id) {
         return repository.findOne(id);
     }
+    
+    public List<Team_Members_Entity> findByTeamId(Long teamId) {
+        return repository.findByTeam_id(teamId);
+    }
 
 }

@@ -53,9 +53,9 @@ var ProjectsComponent = React.createClass( {
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>TITLE</th>
-                                <th>BUDGET</th>
-                                <th>DEAD LINE</th>
+                                <th>Title</th>
+                                <th>Budget</th>
+                                <th>Deadline</th>
                                 <th></th>
                                 <th></th>
                                 <th></th>

@@ -6,6 +6,7 @@ var EditMemberContainer = React.createClass( {
                 surname: '',
                 date_of_birth: '',
                 address: '',
+                team_id: '',
                 position_id: ''
             }
         }

@@ -12,6 +12,8 @@ var EditMemberComponent = React.createClass( {
                 <input className="form-control" type="date" value={this.props.member.date_of_birth} onChange={this.props.onFieldChange( 'date_of_birth' )} /><br />
                 <label>Address:</label><br />
                 <input className="form-control" type="text" value={this.props.member.address} onChange={this.props.onFieldChange( 'address' )} /><br />
+                <label>Team ID:</label><br />
+                <input className="form-control" type="number" value={this.props.member.team_id} onChange={this.props.onFieldChange( 'team_id' )} /><br />
                 <label>Position ID:</label><br />
                 <input className="form-control" type="number" value={this.props.member.position_id} onChange={this.props.onFieldChange( 'position_id' )} /><br />
 

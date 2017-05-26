@@ -33,8 +33,8 @@ var PositionsComponent = React.createClass( {
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>TITLE</th>
-                                <th>EARNINGS</th>
+                                <th>Title</th>
+                                <th>Earnings</th>
                                 <th>Bonus</th>
                                 <th></th>
                                 <th></th>

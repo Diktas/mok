@@ -25,6 +25,7 @@ var MembersComponent = React.createClass( {
                     <td>{member.surname}</td>
                     <td>{fullDate}</td>
                     <td>{member.address}</td>
+                    <td>{member.team_id}</td>
                     <td>{member.position_id}</td>
                     <td style={{ width: '40px' }}>
                         <button type="button" className="btn btn-default" onClick={self.props.onEditItem( member )}
@@ -55,11 +56,12 @@ var MembersComponent = React.createClass( {
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>NAME</th>
-                                <th>SURNAME</th>
-                                <th>DATE OF BIRTH</th>
-                                <th>ADDRESS</th>
-                                <th>POSITION ID</th>
+                                <th>Name</th>
+                                <th>Surname</th>
+                                <th>Date Of Birth</th>
+                                <th>Address</th>
+                                <th>Team ID</th>
+                                <th>Position ID</th>
                                 <th></th>
                                 <th></th>
                                 <th></th>

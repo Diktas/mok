@@ -38,7 +38,7 @@ var TeamsComponent = React.createClass( {
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>TITLE</th>
+                                <th>Title</th>
                                 <th>Description</th>
                                 <th></th>
                                 <th></th>

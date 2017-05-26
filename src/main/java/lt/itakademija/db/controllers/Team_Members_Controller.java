@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import lt.itakademija.db.entities.Team_Members_Entity;
@@ -42,5 +43,10 @@ public class Team_Members_Controller {
 	public Team_Members_Entity findById(@PathVariable("id") Long id) {
 		return service.findById(id);
 	}
+	
+	@GetMapping(value = "/search")
+    public List<Team_Members_Entity> findByTeam(@RequestParam(value = "team_id", required = false) Long teamId) {        
+            return service.findByTeamId(teamId);       
+    }
 
 }
