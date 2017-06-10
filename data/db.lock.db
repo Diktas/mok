@@ -1,6 +1,6 @@
 #FileLock
-#Fri May 26 13:21:56 EEST 2017
-hostName=SIMANELISG.baltic-amadeus.lt
-id=15c4446e8fcaac6debd3b1a91ed0896432341ef6243
+#Sat Jun 10 18:15:34 EEST 2017
+hostName=LAPTOP-J2JJOSIS
+id=15c929318db0e74fd6a9c31c52da9c79e89db1bb9e3
 method=file
-server=192.168.21.87\:56748
+server=192.168.1.66\:65083

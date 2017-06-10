@@ -6,13 +6,13 @@ var App = React.createClass( {
             </div>
         );
     }
-} );
+});
 
 var NoMatch = React.createClass( {
     render: function() {
         return <div>Route did not match</div>;
     }
-} );
+});
 
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
@@ -40,6 +40,8 @@ ReactDOM.render((
                 <Route path="/positions" component={PositionsContainer} />
                 <Route path="/positions/create" component={AddPositionContainer} />
                 <Route path="/positions/update/:positionId" component={EditPositionContainer} />
+
+                <Route path="/examples" component={ExampleListContainer} />
             </Route>
         </Router>
     </Router>

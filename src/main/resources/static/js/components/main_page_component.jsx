@@ -26,7 +26,7 @@ var MainPageComponent = React.createClass( {
                         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul className="nav navbar-nav">
                                 <li className="active"><a href="#">Home<span className="sr-only">(current)</span></a></li>
-                                <li><a href="#">Link</a></li>
+                                <li><Link to="/examples">Examples</Link></li>
                                 <li className="dropdown">
                                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Tables <span className="caret"></span></a>
                                     <ul className="dropdown-menu">
@@ -41,19 +41,19 @@ var MainPageComponent = React.createClass( {
                                 </li>
                             </ul>
                         </div>
-                                        
+
                     </div>
                 </nav>
-                                        
+
                 <div className="content">
                     {this.props.children}
                 </div>
                 <footer>
-                        <div className="row">
-                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <div className="copyright">© 2017 Gsh</div>
-                            </div>
-                        </div>                    
+                    <div className="row">
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div className="copyright">© 2017 Gsh</div>
+                        </div>
+                    </div>
                 </footer>
             </div>
 
