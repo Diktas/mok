@@ -3,8 +3,9 @@ var ExampleLineComponent = function( props ) {
 
     var styles = {
         lineColor: { backgroundColor: "white" },
-
     };
+
+    var Link = ReactRouter.Link;
 
     var addForRemoval = function() {
         props.addForRemoval( props.id )
@@ -26,6 +27,13 @@ var ExampleLineComponent = function( props ) {
 
     return (
         <tr style={props.backgroundColor}>
+
+            <td style={{ width: '40px' }}>
+                <button type="button" className="btn btn-default" onClick={handleOnClick}
+                    data-toggle="tooltip" data-placement="top" title="Select member">
+                    <span className="glyphicon glyphicon-flag"></span></button>
+            </td>
+
             <td>{props.id}</td>
             <td>{props.name}</td>
             <td>{props.surname}</td>
@@ -33,10 +41,13 @@ var ExampleLineComponent = function( props ) {
             <td>{props.address}</td>
 
             <td style={{ width: '40px' }}>
-            <button type="button" className="btn btn-default" onClick={handleOnClick}
-                data-toggle="tooltip" data-placement="top" title="Select member">
-                <span className="glyphicon glyphicon-flag"></span></button>
-        </td>
+                <Link to={'/members/update/' + props.id}><span className="glyphicon glyphicon-pencil"
+                    data-toggle="tooltip" data-placement="top" title="Edit member"></span></Link>
+            </td>
+            <td style={{ width: '40px' }}>
+                <Link to={'/members/description/' + props.id}><span className="glyphicon glyphicon-info-sign"
+                    data-toggle="tooltip" data-placement="top" title="Description"></span></Link>
+            </td>
         </tr>
     )
 };

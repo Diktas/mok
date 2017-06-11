@@ -1,6 +1,8 @@
 
 
 var ExampleListComponent = function( props ) {
+    
+    var Link = ReactRouter.Link;
 
     var members = props.members.map( function( member, index ) {
 
@@ -33,17 +35,22 @@ var ExampleListComponent = function( props ) {
     });
     return (
         <div>
+            <button className="btn btn-success" ><Link to='/members/create/'>
+            <span style={{ color: 'black' }}>Add New Member</span></Link></button>
+            
             <div className="panel panel-default">
                 <div className="panel-heading">Members</div>
                 <table className="table table-hover">
                     <thead>
                         <tr>
+                            <th></th>
                             <th>ID</th>
                             <th>Name</th>
                             <th>Surname</th>
                             <th>Date Of Birth</th>
                             <th>Address</th>
-                            <th>Select</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

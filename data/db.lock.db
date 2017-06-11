@@ -1,6 +1,6 @@
 #FileLock
-#Sat Jun 10 18:15:34 EEST 2017
+#Sun Jun 11 19:46:35 EEST 2017
 hostName=LAPTOP-J2JJOSIS
-id=15c929318db0e74fd6a9c31c52da9c79e89db1bb9e3
+id=15c980cc8ffe40a4be733c1c3c91b544643e8b356cf
 method=file
-server=192.168.1.66\:65083
+server=192.168.1.66\:59999
